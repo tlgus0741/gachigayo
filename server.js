@@ -37,8 +37,9 @@ async function connectDB() {
     db = client.db('koreaglobalinstitute');
     
     // 연결 후 서버 시작
-    app.listen(1000, () => {
-      console.log('Server is running on port 1000.');
+    const port = process.env.PORT || 1000;
+    app.listen(port, () => {
+      console.log('Server is running on port', port);
     });
   } catch (error) {
     console.error('MongoDB connection failed:', error);
