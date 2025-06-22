@@ -1,0 +1,283 @@
+.admin-dashboard-container {
+  padding: 80px 2rem 2rem 2rem;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+.admin-dashboard-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+.admin-dashboard-container .no-consultations {
+  text-align: center;
+  color: #777;
+  font-size: 1.2rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.admin-dashboard-container .consultations-list {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.admin-dashboard-container .consultation-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+.admin-dashboard-container .consultation-card.status-completed {
+  border-left: 5px solid #28a745;
+}
+.admin-dashboard-container .consultation-card.status-cancelled {
+  border-left: 5px solid #dc3545;
+}
+.admin-dashboard-container .consultation-card.status-pending {
+  border-left: 5px solid #ffc107;
+}
+.admin-dashboard-container .consultation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.admin-dashboard-container .consultation-header h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+}
+.admin-dashboard-container .consultation-header .status-badge {
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.admin-dashboard-container .consultation-header .status-badge.status-completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+.admin-dashboard-container .consultation-header .status-badge.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+.admin-dashboard-container .consultation-header .status-badge.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+.admin-dashboard-container .consultation-details {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+.admin-dashboard-container .consultation-details p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+.admin-dashboard-container .consultation-details p strong {
+  color: #333;
+}
+.admin-dashboard-container .consultation-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+.admin-dashboard-container .consultation-actions .action-btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+.admin-dashboard-container .consultation-actions .action-btn.complete-btn {
+  background-color: #28a745;
+  color: white;
+}
+.admin-dashboard-container .consultation-actions .action-btn.complete-btn:hover {
+  background-color: #218838;
+}
+.admin-dashboard-container .consultation-actions .action-btn.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+}
+.admin-dashboard-container .consultation-actions .action-btn.cancel-btn:hover {
+  background-color: #c82333;
+}
+.admin-dashboard-container .consultations-table-container {
+  overflow-x: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+.admin-dashboard-container .consultations-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+.admin-dashboard-container .consultations-table-container table th,
+.admin-dashboard-container .consultations-table-container table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.admin-dashboard-container .consultations-table-container table th {
+  background-color: #f8f9fa;
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.admin-dashboard-container .consultations-table-container table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.admin-dashboard-container .consultations-table-container table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+.admin-dashboard-container .consultations-table-container table tbody tr.status-completed {
+  background-color: #e6ffe6;
+}
+.admin-dashboard-container .consultations-table-container table tbody tr.status-cancelled {
+  background-color: #ffe6e6;
+}
+.admin-dashboard-container .consultations-table-container table tbody tr.status-pending {
+  background-color: #fffacd;
+}
+.admin-dashboard-container .consultations-table-container table .status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  min-width: 70px;
+  text-align: center;
+}
+.admin-dashboard-container .consultations-table-container table .status-badge.status-completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+.admin-dashboard-container .consultations-table-container table .status-badge.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+.admin-dashboard-container .consultations-table-container table .status-badge.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+.admin-dashboard-container .consultations-table-container table .consultation-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.admin-dashboard-container .consultations-table-container table .consultation-actions .action-btn {
+  padding: 0.5rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.admin-dashboard-container .consultations-table-container table .consultation-actions .action-btn.complete-btn {
+  background-color: #28a745;
+  color: white;
+}
+.admin-dashboard-container .consultations-table-container table .consultation-actions .action-btn.complete-btn:hover {
+  background-color: #218838;
+}
+.admin-dashboard-container .consultations-table-container table .consultation-actions .action-btn.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+}
+.admin-dashboard-container .consultations-table-container table .consultation-actions .action-btn.cancel-btn:hover {
+  background-color: #c82333;
+}
+.admin-dashboard-container .detail-modal {
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.admin-dashboard-container .detail-modal .detail-content {
+  margin: 1.5rem 0;
+}
+.admin-dashboard-container .detail-modal .detail-content .detail-row {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+.admin-dashboard-container .detail-modal .detail-content .detail-row:last-child {
+  border-bottom: none;
+}
+.admin-dashboard-container .detail-modal .detail-content .detail-row strong {
+  display: inline-block;
+  width: 120px;
+  color: #333;
+}
+.admin-dashboard-container .detail-modal .detail-content .message-content {
+  margin-top: 1.5rem;
+}
+.admin-dashboard-container .detail-modal .detail-content .message-content .message-text {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+.admin-dashboard-container .detail-modal .modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+.admin-dashboard-container .detail-modal .modal-buttons button {
+  padding: 0.5rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.admin-dashboard-container .detail-modal .modal-buttons button:hover {
+  background-color: #0056b3;
+}
+.admin-dashboard-container .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 0.5rem;
+}
+.admin-dashboard-container .pagination .pagination-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #dee2e6;
+  background-color: white;
+  color: #007bff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+.admin-dashboard-container .pagination .pagination-btn:hover:not(:disabled) {
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+.admin-dashboard-container .pagination .pagination-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.admin-dashboard-container .pagination .pagination-btn.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+.admin-dashboard-container .pagination .pagination-btn.active:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}/*# sourceMappingURL=AdminDashboard.css.map */

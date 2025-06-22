@@ -1,0 +1,260 @@
+.report-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 7rem;
+  background-color: #f5f5f5;
+}
+@media screen and (max-width: 768px) {
+  .report-container {
+    padding: 2rem;
+  }
+}
+.report-container .report-form {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.report-container .report-form .report-title {
+  color: #359EFF;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .report-container .report-form .report-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .report-container .report-form label,
+  .report-container .report-form input,
+  .report-container .report-form textarea,
+  .report-container .report-form select {
+    font-size: 0.9rem;
+  }
+  .report-container .report-form h2 {
+    font-size: 1.6rem;
+  }
+  .report-container .report-form .price-info p {
+    font-size: 1rem;
+  }
+  .report-container .report-form .submit-btn {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+}
+.report-container .report-form h2 {
+  color: #359EFF;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.report-container .report-form .form-group {
+  margin-bottom: 1.5rem;
+}
+.report-container .report-form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+.report-container .report-form .form-group input,
+.report-container .report-form .form-group textarea,
+.report-container .report-form .form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.report-container .report-form .form-group input:focus,
+.report-container .report-form .form-group textarea:focus,
+.report-container .report-form .form-group select:focus {
+  outline: none;
+  border-color: #359EFF;
+}
+.report-container .report-form .form-group select.platform-select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+.report-container .report-form .form-group select.platform-select:hover {
+  border-color: #359EFF;
+}
+.report-container .report-form .form-group select.platform-select option {
+  padding: 0.5rem;
+}
+.report-container .report-form .form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.report-container .report-form .form-group .file-input-container input[type=file] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px dashed #ddd;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+.report-container .report-form .form-group .file-input-container input[type=file]:hover {
+  border-color: #359EFF;
+}
+.report-container .report-form .form-group .file-input-container input[type=file]::-webkit-file-upload-button {
+  visibility: hidden;
+  display: none;
+}
+.report-container .report-form .form-group .file-input-container input[type=file]::before {
+  content: "Choose a file";
+  display: inline-block;
+  background: #359EFF;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  margin-right: 1rem;
+}
+.report-container .report-form .form-group .file-input-container .file-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #e9ecef;
+  border-radius: 4px;
+}
+.report-container .report-form .form-group .file-input-container .file-info span {
+  font-size: 0.9rem;
+  color: #495057;
+  word-break: break-all;
+  margin-right: 1rem;
+}
+.report-container .report-form .form-group .file-input-container .file-info .remove-file {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.5rem;
+}
+.report-container .report-form .form-group .file-input-container .file-info .remove-file:hover {
+  color: #bd2130;
+}
+.report-container .report-form .form-group .file-input-container .file-error {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+.report-container .report-form .form-group .file-input-container .file-hint {
+  color: #6c757d;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+.report-container .report-form .price-info {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  text-align: center;
+}
+.report-container .report-form .price-info p {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+}
+.report-container .report-form .submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: #359EFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.report-container .report-form .submit-btn:hover {
+  background-color: #2b7fd9;
+}
+
+.date-error {
+  color: #e53935;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  background: #ffeaea;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  box-shadow: 0 0 2px #e53935;
+}
+
+.report-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.report-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.coupon-input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.coupon-input-group input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.coupon-input-group input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+.coupon-input-group .verify-coupon-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+.coupon-input-group .verify-coupon-btn:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.success-message {
+  color: #28a745;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.discount-info {
+  color: #6c757d;
+  font-size: 14px;
+  margin-top: 5px;
+  text-decoration: line-through;
+}/*# sourceMappingURL=Report.css.map */

@@ -1,0 +1,441 @@
+:root {
+  --maincolor: #359EFF;
+  --backgroundcolor:#f8f6f6;
+  --textColor: hsl(240, 4%, 36%);
+  --textPointColor:hsl(240, 3%, 32%);
+}
+
+.background {
+  width: 96%;
+  height: 77vh;
+  margin: 50px auto 0;
+  background: #eae8e8;
+}
+.background .backgroundLeft .backgroundLeftContent {
+  position: relative;
+}
+.background .backgroundLeft .backgroundLeftContent h1 span {
+  display: block;
+  color: var(--maincolor);
+}
+.background .backgroundRight {
+  position: relative;
+}
+.background .backgroundRight .leftImg .leftImg1 {
+  background-image: url("https://i.pinimg.com/736x/e8/f6/f1/e8f6f17cf8c366dc18c0a5d0c4f8b85c.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.background .backgroundRight .rightImg .rightImg1 {
+  background-image: url("https://i.pinimg.com/736x/7e/1b/aa/7e1baa0164422aa3a4fe2677fef825c2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.background .backgroundRight .rightImg .rightImg2 {
+  background-image: url("https://i.pinimg.com/736x/59/57/a1/5957a1fb6b4f091d0ddde2cf2200d030.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.background::before {
+  width: 96%;
+  height: 76vh;
+  margin: 0 auto;
+  border-radius: 20px;
+  content: "";
+  background-image: url("./img/backgroundimg2.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0%;
+  z-index: 0;
+}
+
+.firstContent {
+  border-radius: 1.5rem;
+  text-align: start;
+  color: var(--textColor);
+}
+.firstContent p span {
+  font-weight: 600;
+  color: var(--maincolor);
+}
+.firstContent h1 {
+  color: black;
+  text-align: start;
+}
+
+.secondContent {
+  background: #f0f0f0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 96%;
+  margin: 0 auto;
+}
+.secondContent .secondLeftContent {
+  text-align: start;
+}
+.secondContent .secondRightContent .list .listContent {
+  display: inline-block;
+  background: white;
+  color: rgb(237, 237, 237);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.secondContent .secondRightContent .list .listContent p {
+  font-weight: 400;
+  color: var(--textColor);
+}
+.secondContent .secondRightContent .list .listContent p span {
+  color: black;
+  font-weight: 600;
+}
+.secondContent .secondRightContent .list .listContent .listIcon {
+  color: var(--maincolor);
+}
+.secondContent .secondRightContent .list .listContent:hover {
+  animation: pulse;
+  animation-duration: 1s;
+}
+
+.centerBackground .img1 {
+  width: 96%;
+  margin: 0 auto;
+  height: 600px;
+  background-image: url("./img/backgroundimg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.thirdContent .mainContent {
+  background: #eae8e8;
+  box-shadow: 0 19px 38px rgba(124, 124, 124, 0.3), 0 15px 12px rgba(141, 141, 141, 0.22);
+}
+.thirdContent .mainContent .leftContent h1 {
+  color: var(--maincolor);
+}
+.thirdContent .mainContent .leftContent h1 span {
+  display: block;
+}
+.thirdContent .mainContent .leftContent .second {
+  color: var(--textColor);
+}
+.thirdContent .mainContent .leftContent .second span {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .width {
+    width: 100%;
+  }
+  .background {
+    border-radius: 12px;
+  }
+  .background .backgroundLeft {
+    width: 100%;
+    padding: 30px;
+    color: black;
+    text-align: start;
+    margin-bottom: 40px;
+  }
+  .background .backgroundLeft h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .background .backgroundLeft h1 span {
+    display: block;
+  }
+  .background .backgroundLeft p {
+    color: var(--textColor);
+    margin-bottom: 25px;
+  }
+  .background .backgroundRight {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    padding: 0 10px 50px 10px;
+  }
+  .background .backgroundRight .leftImg {
+    width: 50%;
+  }
+  .background .backgroundRight .leftImg .leftImg1 {
+    margin: 0 auto;
+    width: 90%;
+    height: 280px;
+    border-radius: 12px;
+  }
+  .background .backgroundRight .rightImg {
+    width: 50%;
+  }
+  .background .backgroundRight .rightImg .rightImg1 {
+    margin: 0 auto;
+    width: 90%;
+    height: 120px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+  }
+  .background .backgroundRight .rightImg .rightImg2 {
+    margin: 0 auto;
+    width: 90%;
+    height: 150px;
+    border-radius: 12px;
+  }
+  .firstContent {
+    padding: 60px;
+  }
+  .firstContent p {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+  .firstContent p span {
+    font-size: 1.5rem;
+  }
+  .firstContent h1 {
+    font-size: 2rem;
+    margin-top: 7rem;
+  }
+  .secondContent {
+    padding-bottom: 40px;
+  }
+  .secondContent .secondLeftContent {
+    width: 95%;
+    margin: 30px auto 0;
+    padding: 30px 10px;
+  }
+  .secondContent .secondLeftContent h1 {
+    font-size: 1.5rem;
+  }
+  .secondContent .list {
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .secondContent .list .listContent {
+    width: 45%;
+    border-radius: 1px;
+    padding: 20px 0 20px 10px;
+    margin: 20px auto;
+    border-radius: 12px;
+  }
+  .secondContent .list .listContent p {
+    width: 80%;
+    font-size: 0.8rem;
+  }
+  .secondContent .list .listContent p span {
+    display: block;
+    font-size: 0.9rem;
+  }
+  .secondContent .list .listContent .listIcon {
+    width: 15%;
+    text-align: end;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  .thirdContent {
+    padding: 60px;
+    text-align: start;
+  }
+  .thirdContent .first {
+    margin-bottom: 60px;
+    font-size: 1.4rem;
+  }
+  .thirdContent .mainContent {
+    background: #eae8e8;
+    padding: 40px 30px;
+    border-radius: 12px;
+  }
+  .thirdContent .mainContent .leftContent h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+  .thirdContent .mainContent .leftContent p {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .width {
+    width: 80%;
+  }
+  .background {
+    border-radius: 20px;
+  }
+  .background .backgroundLeft {
+    float: left;
+    width: 48%;
+    padding: 200px 100px;
+  }
+  .background .backgroundLeft .backgroundLeftContent h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+  }
+  .background .backgroundLeft .backgroundLeftContent p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--textColor);
+  }
+  .background .backgroundLeft .backgroundLeftContent button {
+    font-size: 1rem;
+    padding: 12px 20px;
+    font-weight: 500;
+    border-radius: 16px;
+  }
+  .background .backgroundRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .background .backgroundRight .leftImg {
+    width: 50%;
+  }
+  .background .backgroundRight .leftImg .leftImg1 {
+    width: 80%;
+    height: 55vh;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+  .background .backgroundRight .rightImg {
+    width: 50%;
+    padding: 30px 0;
+  }
+  .background .backgroundRight .rightImg .rightImg1 {
+    width: 85%;
+    height: 33vh;
+    margin: 0;
+    border-radius: 20px;
+  }
+  .background .backgroundRight .rightImg .rightImg2 {
+    width: 85%;
+    height: 33vh;
+    margin: 25px 0;
+    border-radius: 20px;
+  }
+  .firstContent {
+    width: 80%;
+    padding: 150px 250px;
+  }
+  .firstContent p {
+    font-size: 2.5rem;
+    text-align: start;
+    line-height: 3.5rem;
+    margin-bottom: 100px;
+    letter-spacing: 1.3px;
+  }
+  .firstContent h1 {
+    margin-top: 50px;
+    text-align: start;
+    font-size: 3.5rem;
+  }
+  .secondContent .secondLeftContent {
+    padding-top: 50px;
+    padding-left: 60px;
+  }
+  .secondContent .secondLeftContent h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+  }
+  .secondContent .secondRightContent .listimg {
+    float: left;
+    width: 40%;
+    height: 780px;
+    padding: 75px 50px 10px 70px;
+  }
+  .secondContent .secondRightContent .listimg .listimge {
+    background-image: url("./img/listimg.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  .secondContent .secondRightContent .list {
+    float: left;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+  .secondContent .secondRightContent .list .listContent {
+    width: 45%;
+    height: 170px;
+    padding: 28px;
+    margin: 0 auto 30px auto;
+    border-radius: 20px;
+  }
+  .secondContent .secondRightContent .list .listContent .listIcon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .secondContent .secondRightContent .list .listContent p {
+    font-size: 1rem;
+  }
+  .secondContent .secondRightContent .list .listContent p span {
+    font-size: 1.3rem;
+    display: block;
+  }
+  .thirdContent {
+    padding: 200px 400px 300px 200px;
+  }
+  .thirdContent .first {
+    text-align: start;
+    font-size: 2.5rem;
+    margin-bottom: 100px;
+  }
+  .thirdContent .mainContent {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
+  .thirdContent .mainContent .leftContent {
+    width: 75%;
+    padding: 10px 50px;
+  }
+  .thirdContent .mainContent .leftContent h1 {
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+  .thirdContent .mainContent .leftContent .second {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+  .thirdContent .mainContent .rightContent {
+    width: 25%;
+  }
+  .thirdContent .mainContent .rightContent .applybtn {
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+    font-weight: 600;
+  }
+}
+.home-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes bounceInLeft {}/*# sourceMappingURL=Home.css.map */

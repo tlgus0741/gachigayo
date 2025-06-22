@@ -1,0 +1,416 @@
+:root{
+    --maincolor: #359EFF;
+    --backgroundcolor:#f8f6f6;
+    --textColor: hsl(240, 4%, 36%);
+    --textPointColor:hsl(240, 3%, 32%);
+}
+
+.concern-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+.concern-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.concern{
+
+    .concernButtonBox{
+        .concernButton{
+            cursor: pointer;
+        }
+
+        .concernButton:hover{
+            color: white;
+            background-color: var(--maincolor);
+        }
+
+
+    }
+
+    .preparing{
+        cursor: pointer;
+
+        .preparingBox{
+            h1{
+                color: var(--textColor);
+            }
+            .preparingIcon{
+                color: var(--textColor);
+            }
+
+            .color{
+                color: var(--maincolor);
+            }
+        }
+
+    }
+    .preparingOpen{
+        background-color: var(--backgroundcolor);
+        color: var(--textColor);
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 767px){
+    .concern{
+        width: 100%;
+        padding:5%;
+        .concernTitle{   
+            width: 100%;
+
+            h1{
+                font-size: 1.3rem;
+                margin-left: 10px;
+                margin-bottom: 20px;
+
+            }
+        }
+
+        .concernButtonBox{
+            width: 100%;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+
+            .concernButton{
+                width: 30%;
+                font-size: .6rem;
+                border: none;
+                border-radius: 10px;
+                padding: 10px;
+                background-color: var(--backgroundcolor);
+
+            }
+        }
+
+        .preparing{
+            width: 100%;
+            border-bottom: 1.5px solid #dedede;
+            padding: 5% 0;
+            .preparingBox{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                h1{
+                    font-weight: 400;
+                    margin: 0 10px;
+                    flex-grow: 1;
+                    font-size: .6rem;
+                    text-align: start;
+                }
+                
+            }
+        }
+
+        .preparingOpen{
+            width: 100%;
+            padding: 20px;
+
+            .preparingWho{
+                ul{
+                    h4{
+                        color: var(--mainTextColor);
+                        margin-bottom: 10px;
+                    }
+                    li{
+                        list-style: disc;
+                        font-size: .6rem;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            .preparingIncluded{
+                ul{
+
+                    h4{
+                        color: var(--mainTextColor);
+                        margin-bottom: 10px;
+                    }
+                    li{
+
+                        list-style: disc;
+                        font-size: .6rem;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .skipButton{
+        width: 100%;
+        margin-top: 3%;
+    
+        .skipButtonBox{
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+    
+            button{
+                border: none;
+                background-color: white;
+                cursor: pointer;
+                font-size: .8rem;
+                color: var(--textColor);
+            }
+    
+            span{
+                font-size: .7rem;
+                font-weight: 400;
+                color: var(--textColor);
+                margin: 0 5%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+    .concern{
+        width: 100%;
+        padding: 3% 4%;
+        margin: 0 auto;
+
+        .concernTitle{
+            h1{
+                font-size: 2.2rem;
+            }
+        }
+
+        .concernButtonBox{
+            margin-top: 2%;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2%;
+
+
+            button{
+                width: 30%;
+                border: none;
+                padding: 16px;
+                border-radius: 16px;
+                font-size: .8rem;
+
+
+            }      
+        }
+        .preparing{
+            width: 90%;
+            border-bottom: 1.5px solid #dedede;
+            padding: 2% 0;
+            .preparingBox{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                h1{
+                    font-weight: 400;
+                    margin: 0 10px;
+                    flex-grow: 1;
+                    text-align: start;
+                    font-size: .8rem;
+                }
+                
+            }
+        }
+
+        .preparingOpen{
+            width: 90%;
+            padding: 2%;
+
+            .preparingWho{
+
+                margin-bottom: 3%;
+                ul{
+                    h4{
+                        color: var(--mainTextColor);
+                        margin-bottom: 10px;
+                        font-size: 1.3rem;
+                    }
+                    li{
+                        list-style: disc;
+                        font-size: .8rem;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            .preparingIncluded{
+                ul{
+
+                    h4{
+                        color: var(--mainTextColor);
+                        margin-bottom: 10px;
+                        font-size: 1.3rem;
+                    }
+                    li{
+
+                        list-style: disc;
+                        font-size: .8rem;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .skipButton{
+        width: 90%;
+        margin-top: 3%;
+    
+        .skipButtonBox{
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+    
+            button{
+                border: none;
+                background-color: white;
+                cursor: pointer;
+                font-size: .9rem;
+                color: var(--textColor);
+            }
+    
+            span{
+                font-size: .8rem;
+                font-weight: 400;
+                color: var(--textColor);
+                margin: 0 5%;
+            }
+        }
+    }
+
+
+
+}
+
+@media screen and (min-width: 1024px){
+
+    .concern{
+        width: 100%;
+        padding: 2% 5%;
+        margin: 0 auto;
+
+        .concernTitle{
+            h1{
+                font-size: 3rem;
+            }
+        }
+
+        .concernButtonBox{
+            margin-top: 2%;
+            width: 75%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2%;
+
+
+            button{
+                border: none;
+                width: 30%;
+                padding: 20px;
+                border-radius: 20px;
+                font-size: 1rem;
+
+
+            }      
+        }
+        .preparing{
+            width: 80%;
+            border-bottom: 1.5px solid #dedede;
+            padding: 2% 0;
+            .preparingBox{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                h1{
+                    font-weight: 400;
+                    margin: 0 10px;
+                    flex-grow: 1;
+                    text-align: start;
+                    font-size: 1.2rem;
+                }
+                
+            }
+        }
+
+        .preparingOpen{
+            width: 80%;
+            padding: 2%;
+
+            .preparingWho{
+
+                margin-bottom: 3%;
+                ul{
+                    h4{
+                        color: var(--mainTextColor);
+                        margin-bottom: 10px;
+                        font-size: 1.6rem;
+                    }
+                    li{
+                        list-style: disc;
+                        font-size: 1rem;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            .preparingIncluded{
+                ul{
+
+                    h4{
+                        color: var(--mainTextColor);
+                        margin-bottom: 10px;
+                        font-size: 1.6rem;
+                    }
+                    li{
+
+                        list-style: disc;
+                        font-size: 1rem;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .skipButton{
+        width: 80%;
+        margin-top: 3%;
+    
+        .skipButtonBox{
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+    
+            button{
+                border: none;
+                background-color: white;
+                cursor: pointer;
+                font-size: 1.2rem;
+                color: var(--textColor);
+            }
+    
+            span{
+                font-size: 1.1rem;
+                font-weight: 400;
+                color: var(--textColor);
+                margin: 0 5%;
+            }
+        }
+    }
+
+
+
+}

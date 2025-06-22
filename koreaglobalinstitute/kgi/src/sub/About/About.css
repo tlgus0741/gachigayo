@@ -1,0 +1,129 @@
+:root {
+  --maincolor: #359EFF;
+  --backgroundcolor:#f8f6f6;
+  --textColor: hsl(240, 4%, 36%);
+  --textPointColor:hsl(240, 3%, 32%);
+}
+
+.detail {
+  width: 95%;
+  height: 500px;
+  background-image: url("./img/backgroundimg3.jpg");
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+}
+.detail .detailHeader {
+  width: 100%;
+  position: relative;
+}
+.detail .detailHeader h1 {
+  display: inline-block;
+  background-color: var(--maincolor);
+  color: white;
+  font-weight: 700;
+}
+
+.content .contentRight {
+  color: var(--textColor);
+  background-color: var(--backgroundcolor);
+}
+
+.line {
+  width: 70%;
+  height: 1px;
+  border-bottom: 1px solid #dedede;
+}
+
+.about-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+  .detail {
+    margin-bottom: 50px;
+    border-radius: 12px;
+  }
+  .detail .detailHeader h1 {
+    position: absolute;
+    top: 400px;
+    left: 20px;
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 12px;
+  }
+  .detail .detailHeader .headerLine {
+    width: 60%;
+    margin-top: 15px;
+  }
+  .content .contentLeft {
+    width: 100%;
+    padding: 40px;
+  }
+  .content .contentLeft h1 {
+    font-size: 1.3rem;
+  }
+  .content .contentRight {
+    width: 95%;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 12px;
+  }
+  .content .contentRight p {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+  .line {
+    margin: 50px auto 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .detail {
+    height: 600px;
+    margin-bottom: 60px;
+    border-radius: 20px;
+  }
+  .detail .detailHeader h1 {
+    font-size: 2.8rem;
+    position: absolute;
+    top: 460px;
+    left: 35px;
+    padding: 13px 20px;
+    border-radius: 20px;
+  }
+  .content {
+    display: flex;
+  }
+  .content .contentLeft {
+    width: 35%;
+    padding: 28px 50px;
+  }
+  .content .contentLeft h1 {
+    font-size: 2rem;
+  }
+  .content .contentRight {
+    width: 62%;
+    padding: 30px 10px 30px 40px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+  }
+  .content .contentRight p {
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
+    line-height: 50px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .line {
+    margin: 30px auto 60px;
+  }
+}/*# sourceMappingURL=About.css.map */

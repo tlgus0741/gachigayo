@@ -1,0 +1,239 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+.register-container .register-form {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.register-container .register-form h2 {
+  color: #359EFF;
+  font-size: 2.6rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+@media screen and (max-width: 768px) {
+  .register-container .register-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.8rem;
+  }
+}
+.register-container .register-form .form-group {
+  margin-bottom: 1.6rem;
+}
+.register-container .register-form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.01em;
+}
+.register-container .register-form .form-group input,
+.register-container .register-form .form-group select {
+  width: 100%;
+  padding: 0.9rem !important;
+  border: 1px solid #ddd !important;
+  border-radius: 6px !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 0.01em;
+  -webkit-appearance: none !important;
+     -moz-appearance: none !important;
+          appearance: none !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23666' d='M5.61 7.41L10 11.8l4.39-4.39L16 8l-6 6-6-6z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.7em top 50% !important;
+  background-size: 1.2em auto !important;
+}
+.register-container .register-form .form-group input:focus,
+.register-container .register-form .form-group select:focus {
+  outline: none;
+  border-color: #359EFF;
+  box-shadow: 0 0 0 2px rgba(53, 158, 255, 0.12);
+}
+.register-container .register-form .form-group .email-verification, .register-container .register-form .form-group .verification-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.register-container .register-form .form-group .email-verification input, .register-container .register-form .form-group .verification-input input {
+  flex-grow: 1;
+}
+.register-container .register-form .policy-agreements {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #eee;
+  padding: 1.2rem;
+  border-radius: 8px;
+  background-color: #fcfcfc;
+}
+.register-container .register-form .policy-agreements .important-note {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+  text-align: left;
+}
+.register-container .register-form .policy-agreements .checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+}
+.register-container .register-form .policy-agreements .checkbox-group:last-child {
+  margin-bottom: 0;
+}
+.register-container .register-form .policy-agreements .checkbox-group input[type=checkbox] {
+  margin-top: 0.3rem;
+  margin-right: 0.8rem;
+  min-width: 16px;
+  min-height: 16px;
+  accent-color: var(--maincolor);
+  cursor: pointer;
+}
+.register-container .register-form .policy-agreements .checkbox-group label {
+  margin-bottom: 0;
+  font-weight: 400;
+  color: #555;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+}
+.register-container .register-form .policy-agreements .checkbox-group label a {
+  color: var(--maincolor);
+  text-decoration: underline;
+  margin-left: 5px;
+  font-weight: 500;
+}
+.register-container .register-form .policy-agreements .checkbox-group label a:hover {
+  color: #2a7dcf;
+}
+.register-container .register-form .submit-btn {
+  width: 100%;
+  padding: 1rem !important;
+  background-color: #359EFF !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 1rem;
+  letter-spacing: 0.02em;
+}
+.register-container .register-form .submit-btn:hover {
+  background-color: #2b7fd9;
+  transform: translateY(-0.8px);
+  box-shadow: 0 1px 5px rgba(53, 158, 255, 0.18);
+}
+.register-container .register-form .action-button {
+  padding: 0.75rem 1rem !important;
+  border: 1px solid #ddd !important;
+  border-radius: 6px !important;
+  background-color: #f8f8f8 !important;
+  color: #333 !important;
+  font-size: 1rem !important;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.register-container .register-form .action-button:hover {
+  background-color: #e8e8e8;
+  border-color: #ccc;
+}
+.register-container .register-form .action-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.register-container .register-form .login-link {
+  text-align: center;
+  margin-top: 1.6rem;
+  font-size: 1.1rem;
+  color: #666;
+  letter-spacing: 0.01em;
+}
+.register-container .register-form .login-link a {
+  color: #359EFF;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.3rem;
+  letter-spacing: normal;
+}
+.register-container .register-form .login-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .register-form {
+    padding: 1rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .register-form input {
+    font-size: 0.8rem !important;
+  }
+  .register-form select {
+    font-size: 0.8rem !important;
+  }
+  .register-form .email-verification, .register-form .verification-input {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .register-form .email-verification button, .register-form .verification-input button {
+    width: 100%;
+    font-size: 0.8rem !important;
+  }
+  .register-form .policy-agreements {
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .register-form .policy-agreements .important-note {
+    font-size: 0.75rem;
+    margin-bottom: 0.8rem;
+  }
+  .register-form .policy-agreements .checkbox-group input[type=checkbox] {
+    min-width: 14px;
+    min-height: 14px;
+    margin-top: 0.2rem;
+    margin-right: 0.6rem;
+  }
+  .register-form .policy-agreements .checkbox-group label {
+    font-size: 0.8rem;
+  }
+  .register-form .policy-agreements .checkbox-group label a {
+    font-size: 0.8rem;
+  }
+  .register-form .submit-btn {
+    font-size: 0.8rem !important;
+  }
+}
+/* Desktop adjustments */
+@media screen and (min-width: 768px) {
+  .register-container {
+    padding: 8rem;
+  }
+  .register-form {
+    max-width: 600px;
+    padding: 2.8rem;
+  }
+}
+.register-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}/*# sourceMappingURL=Register.css.map */

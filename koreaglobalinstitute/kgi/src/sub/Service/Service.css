@@ -1,0 +1,358 @@
+:root {
+  --maincolor: #359EFF;
+  --backgroundcolor:#f8f6f6;
+  --textColor: hsl(240, 4%, 36%);
+  --textPointColor:hsl(240, 3%, 32%);
+}
+
+.service {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+.service-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+  transform: scale(1.035);
+  box-shadow: 0 8px 32px rgba(53, 158, 255, 0.13);
+  z-index: 2;
+}
+
+.animated-btn {
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.animated-btn:hover {
+  background: #359EFF;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(53, 158, 255, 0.15);
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media screen and (max-width: 768px) {
+  .first {
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+  .first .firstTitle h1 {
+    font-size: 1.5rem;
+  }
+  .first .firstBox {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f8f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 30px;
+    padding: 30px;
+  }
+  .first .firstBox .firstBoxLeft {
+    width: 30%;
+  }
+  .first .firstBox .firstBoxLeft h4 {
+    font-size: 1.2rem;
+  }
+  .first .firstBox .firstBoxRight {
+    width: 80%;
+    font-size: 0.8rem;
+  }
+  .first .firstBox .firstBoxRight ul li {
+    text-align: start;
+    line-height: 20px;
+    color: var(--textColor);
+  }
+  .third .thirdTitle {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .third .thirdTitle h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--textPointColor);
+  }
+  .third .thirdBox {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .third .thirdBox .thirdFlexBox {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #f8f6f6;
+    padding: 50px 30px;
+  }
+  .third .thirdBox .thirdFlexBox h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  .third .thirdBox .thirdFlexBox span {
+    font-size: 0.8rem;
+    color: var(--textColor);
+  }
+  .fourth {
+    padding: 100px 0;
+  }
+  .fourth .fourthTitle {
+    margin-bottom: 20px;
+  }
+  .fourth .fourthTitle h1 {
+    font-size: 1.8rem;
+    color: #b06cd8;
+  }
+  .fourth .fourthTitle h1 span {
+    font-size: 1.5rem;
+    color: black;
+  }
+  .fourth .fourthBox {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .fourth .fourthBox .fourthFlexBox {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #f8f6f6;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .fourth .fourthBox .fourthFlexBox h4 {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  .fourth .fourthBox .fourthFlexBox span {
+    color: var(--textColor);
+    font-size: 0.8rem;
+  }
+  .fifth {
+    padding: 100px 0;
+  }
+  .fifth .fifthTitle h4 {
+    font-size: 1.5rem;
+    margin-bottom: 60px;
+  }
+  .fifth .fifthTitle span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--maincolor);
+  }
+  .fifth .fifthBox {
+    width: 80%;
+    margin: 25px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .fifth .fifthBox .fifthFlexBox {
+    background-color: #f8f6f6;
+    padding: 25px 20px;
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .fifth .fifthBox .fifthFlexBox h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  .fifth .fifthBox .fifthFlexBox span {
+    font-size: 0.8rem;
+    color: var(--textColor);
+  }
+  .fifth .fifthBox .marginnone {
+    margin-bottom: none;
+  }
+  .fifth .applyButton {
+    margin-top: 50px;
+  }
+  .fifth .applyButton .applyDown {
+    color: var(--textColor);
+    margin-bottom: 20px;
+  }
+  .fifth .applyButton button {
+    display: block;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--maincolor);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .fifth .applyButton button:hover {
+    color: white;
+    background: #3191ea;
+  }
+}
+@media screen and (min-width: 768px) {
+  .first {
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+  .first .firstTitle h1 {
+    font-size: 2.5rem;
+  }
+  .first .firstBox {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #f8f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 30px;
+    padding: 30px;
+  }
+  .first .firstBox .firstBoxLeft {
+    width: 30%;
+  }
+  .first .firstBox .firstBoxLeft h4 {
+    font-size: 2rem;
+  }
+  .first .firstBox .firstBoxRight {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+  .first .firstBox .firstBoxRight ul li {
+    text-align: start;
+    color: var(--textColor);
+  }
+  .third .thirdTitle {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .third .thirdTitle h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--textPointColor);
+  }
+  .third .thirdBox {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .third .thirdBox .thirdFlexBox {
+    margin-top: 20px;
+    width: 32%;
+    border-radius: 20px;
+    background-color: #f8f6f6;
+    padding: 50px 30px;
+  }
+  .third .thirdBox .thirdFlexBox h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .third .thirdBox .thirdFlexBox span {
+    font-size: 1rem;
+    color: var(--textColor);
+  }
+  .fourth {
+    padding: 100px 0;
+  }
+  .fourth .fourthTitle {
+    margin-bottom: 20px;
+  }
+  .fourth .fourthTitle h1 {
+    font-size: 2.5rem;
+    color: #b06cd8;
+  }
+  .fourth .fourthTitle h1 span {
+    font-size: 2rem;
+    color: black;
+  }
+  .fourth .fourthBox {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .fourth .fourthBox .fourthFlexBox {
+    width: 49%;
+    padding: 50px 25px;
+    background-color: #f8f6f6;
+    border-radius: 20px;
+  }
+  .fourth .fourthBox .fourthFlexBox h4 {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+  }
+  .fourth .fourthBox .fourthFlexBox span {
+    color: var(--textColor);
+  }
+  .fifth {
+    padding: 100px 0;
+  }
+  .fifth .fifthTitle h4 {
+    font-size: 2rem;
+    margin-bottom: 60px;
+  }
+  .fifth .fifthTitle span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--maincolor);
+  }
+  .fifth .fifthBox {
+    width: 80%;
+    margin: 25px auto 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .fifth .fifthBox .fifthFlexBox {
+    background-color: #f8f6f6;
+    padding: 50px 30px;
+    border-radius: 20px;
+    width: 24%;
+  }
+  .fifth .fifthBox .fifthFlexBox h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  .fifth .fifthBox .fifthFlexBox span {
+    font-size: 1rem;
+    color: var(--textColor);
+  }
+  .fifth .applyButton {
+    margin-top: 100px;
+  }
+  .fifth .applyButton .applyDown {
+    color: var(--textColor);
+    margin-bottom: 20px;
+  }
+  .fifth .applyButton button {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--maincolor);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .fifth .applyButton button:hover {
+    color: white;
+    background: #3191ea;
+  }
+}/*# sourceMappingURL=Service.css.map */
