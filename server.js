@@ -113,8 +113,8 @@ const registrationCodes = new Map();
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'koreaglobalinstitute@gmail.com', // 변경된 Gmail 주소
-    pass: 'jhwf sxxp cdac lprj'      // koreaglobalinstitute@gmail.com의 앱 비밀번호로 변경 필요
+    user: process.env.EMAIL_USER, // 환경변수로 변경
+    pass: process.env.EMAIL_PASS  // 환경변수로 변경
   }
 });
 
