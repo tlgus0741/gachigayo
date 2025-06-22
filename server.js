@@ -37,7 +37,7 @@ async function connectDB() {
     db = client.db('koreaglobalinstitute');
     
     // 연결 후 서버 시작
-    const port = process.env.PORT || 1000;
+    const port = process.env.PORT || 3000;
     app.listen(port, () => {
       console.log('Server is running on port', port);
     });
