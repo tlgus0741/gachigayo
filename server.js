@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -27,6 +28,7 @@ app.use(cors({
 
 // MongoDB 연결
 let db;
+console.log('MONGODB_URI:', process.env.MONGODB_URI);
 // const url = 'mongodb+srv://koreaglobalinstitue:fltnl635@cluster0.uztk5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 const url = process.env.MONGODB_URI;
 const client = new MongoClient(url);
@@ -936,6 +938,8 @@ app.get('*', (req, res) => {
 });
 
 // MongoDB 연결 시작
-connectDB(); 
+connectDB();
+
+
 
 
