@@ -13,7 +13,7 @@ const nodemailer = require('nodemailer');
 const checkoutNodeJssdk = require('@paypal/checkout-server-sdk');
 
 // PayPal 환경 설정
-let environment = new checkoutNodeJssdk.core.SandboxEnvironment(
+let environment = new checkoutNodeJssdk.core.LiveEnvironment(
   'ATo2wPm8KSTlbGNB1zrM_ZAE6g5zZGtH1_PrbY1hTWFTMyKUDw1Kwa7ODQH74YikUD9YNGP0Mahyvpn3',
   'EBf8dAm1WsPVrnUG-Gf9kb_CVoYG3QhhTgVVeSVc1l1uyKkxF35AIK70jhUGHdp6Px8YoAXyKTerqDfa'
 );
@@ -22,7 +22,7 @@ let paypalClient = new checkoutNodeJssdk.core.PayPalHttpClient(environment);
 // 미들웨어 설정
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://gachigayokorea.com',
   credentials: true
 }));
 
@@ -910,7 +910,7 @@ app.post('/api/delete-account', async (req, res) => {
       message: 'An error occurred while deleting the account.' 
     });
   }
-});
+}); 
 
 // 상담 내역 자동 삭제 스케줄러 (매일 실행)
 const scheduleConsultationDeletion = async () => {
