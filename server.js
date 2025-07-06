@@ -27,6 +27,7 @@ app.use(cors({
 
 // MongoDB 연결
 let db;
+// const url = 'mongodb+srv://koreaglobalinstitue:fltnl635@cluster0.uztk5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 const url = process.env.MONGODB_URI;
 const client = new MongoClient(url);
 
@@ -88,7 +89,7 @@ passport.use(new LocalStrategy({
 
     return done(null, user);
   } catch (error) {
-    return done(error);
+    return done(error); 
   }
 }));
 
