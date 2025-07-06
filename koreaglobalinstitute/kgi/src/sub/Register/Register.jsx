@@ -62,7 +62,7 @@ const Register = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:1000/api/send-registration-code', {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/send-registration-code`, {
         email: formData.email
       });
       if (res.data.success) {
@@ -84,7 +84,7 @@ const Register = () => {
     setMessage('');
 
     try {
-      const res = await axios.post('http://localhost:1000/api/verify-registration-code', {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/verify-registration-code`, {
         email: formData.email,
         code: verificationCode
       });
@@ -119,7 +119,7 @@ const Register = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:1000/api/register', {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/register`, {
         ...formData,
         verificationCode
       });

@@ -38,7 +38,7 @@ const ReportHistory = () => {
       try {
         // 이메일 기반으로 조회 (로그인 시스템이 있다면 사용자 이메일로 필터)
         // 백엔드에서 req.user.email을 사용하므로, 더 이상 프론트에서 이메일 파라미터를 보낼 필요 없음
-        const res = await axios.get('http://localhost:1000/api/consultations', {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/consultations`, {
           withCredentials: true // 세션 정보가 전달되도록 설정
         });
         setReports(res.data.reports || []);
@@ -65,7 +65,7 @@ const ReportHistory = () => {
     setIsCancelling(true);
 
     try {
-      const response = await axios.post('http://localhost:1000/api/consultations/cancel', {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/consultations/cancel`, {
         consultationId: selectedReport._id,
         cancelReason: cancelReason
       });

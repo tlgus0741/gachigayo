@@ -50,7 +50,7 @@ const Payment = () => {
       const details = await actions.order.capture();
       const captureId = details.purchase_units?.[0]?.payments?.captures?.[0]?.id;
       
-      const response = await axios.post('http://localhost:1000/api/consultations', {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/consultations`, {
         ...consultationData,
         paymentStatus: 'completed',
         paymentId: details.id,

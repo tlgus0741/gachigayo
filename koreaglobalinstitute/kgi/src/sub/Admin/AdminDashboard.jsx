@@ -27,7 +27,7 @@ const AdminDashboard = () => {
 
     const fetchAllConsultations = async () => {
       try {
-        const response = await axios.get('http://localhost:1000/api/consultations', {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/consultations`, {
           withCredentials: true
         });
         setConsultations(response.data.reports || []);
@@ -58,7 +58,7 @@ const AdminDashboard = () => {
     e.stopPropagation(); // 이벤트 버블링 방지
     setIsCompleting(prev => ({ ...prev, [consultationId]: true }));
     try {
-      const response = await axios.post('http://localhost:1000/api/consultations/complete', 
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/consultations/complete`, 
         { consultationId },
         { withCredentials: true }
       );
@@ -93,7 +93,7 @@ const AdminDashboard = () => {
     setCancelError('');
 
     try {
-      const response = await axios.post('http://localhost:1000/api/consultations/cancel', {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/consultations/cancel`, {
         consultationId: selectedConsultation._id,
         cancelReason: cancelReason,
         cancelledByAdmin: true

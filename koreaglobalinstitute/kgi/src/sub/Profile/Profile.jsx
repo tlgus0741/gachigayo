@@ -111,7 +111,7 @@ const Profile = () => {
     }
     try {
       const email = localStorage.getItem('userEmail');
-      const res = await axios.post('http://localhost:1000/api/change-password', {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/change-password`, {
         email,
         currentPassword,
         newPassword
@@ -140,7 +140,7 @@ const Profile = () => {
 
     try {
       const email = localStorage.getItem('userEmail');
-      const res = await axios.post('http://localhost:1000/api/delete-account', {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/delete-account`, {
         email
       });
       

@@ -84,7 +84,7 @@ const Report = () => {
     setCouponError('');
 
     try {
-      const response = await axios.post('http://localhost:1000/api/verify-coupon', {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/verify-coupon`, {
         code: couponCode,
         email: formData.email
       });
