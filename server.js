@@ -25,6 +25,11 @@ app.use(cors({
   origin: 'https://gachigayokorea.com',
   credentials: true
 }));
+// CORS 설정
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://gachigayokorea.com'],
+  credentials: true
+}));
 
 // MongoDB 연결
 let db;
