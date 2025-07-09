@@ -52,7 +52,7 @@ async function connectDB() {
 
 // 세션 설정
 app.use(session({
-  secret: 'your-secret-key',
+  secret: 'EBf8dAm1WsPVrnUG-Gf9kb_CVoYG3QhhTgVVeSVc1l1uyKkxF35AIK70jhUGHdp6Px8YoAXyKTerqDfa',
   resave: false,
   saveUninitialized: false,
   cookie: { 
