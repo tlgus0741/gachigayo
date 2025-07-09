@@ -12,7 +12,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:1000',  // Node 서버 포트
+        target: 'http://localhost:3000',  // Node 서버 포트
         changeOrigin: true,
       },
     },
