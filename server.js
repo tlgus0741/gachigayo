@@ -932,11 +932,6 @@ const scheduleConsultationDeletion = async () => {
 // 매일 자정에 실행
 setInterval(scheduleConsultationDeletion, 24 * 60 * 60 * 1000);
 
-// React 라우트 처리
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'koreaglobalinstitute/kgi/dist/index.html'));
-});
-
 // MongoDB 연결 시작
 connectDB();
 
