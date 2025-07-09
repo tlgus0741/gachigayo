@@ -52,12 +52,11 @@ async function connectDB() {
 
 // 세션 설정
 app.use(session({
-  secret: 'EBf8dAm1WsPVrnUG-Gf9kb_CVoYG3QhhTgVVeSVc1l1uyKkxF35AIK70jhUGHdp6Px8YoAXyKTerqDfa',
+  secret: 'your-secret-key',
   resave: false,
   saveUninitialized: false,
   cookie: { 
-    secure: true, // 운영(https)에서는 true
-    sameSite: 'none', // 크로스도메인 허용
+    secure: false,
     maxAge: 24 * 60 * 60 * 1000
   },
   store: MongoStore.create({
