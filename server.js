@@ -56,7 +56,8 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: { 
-    secure: false,
+    secure: true, // 운영(https)에서는 true
+    sameSite: 'none', // 크로스도메인 허용
     maxAge: 24 * 60 * 60 * 1000
   },
   store: MongoStore.create({
