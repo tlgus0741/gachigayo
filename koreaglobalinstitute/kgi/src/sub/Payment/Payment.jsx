@@ -6,7 +6,7 @@ import './Payment.scss';
 
 // PayPal 설정
 const initialOptions = {
-  "client-id": "ATo2wPm8KSTlbGNB1zrM_ZAE6g5zZGtH1_PrbY1hTWFTMyKUDw1Kwa7ODQH74YikUD9YNGP0Mahyvpn3",
+  "client-id": "AfFwwwuH7268LpnzokXxTpedYKAOmYgnJfj_u6ZdU6MWCof0SmOFosPeWp2JK5wesGmNVfp2RXq9uXrJ",
   currency: "USD",
   intent: "capture"
 };

@@ -14,8 +14,8 @@ const checkoutNodeJssdk = require('@paypal/checkout-server-sdk');
 
 // PayPal 환경 설정
 let environment = new checkoutNodeJssdk.core.LiveEnvironment(
-  'ATo2wPm8KSTlbGNB1zrM_ZAE6g5zZGtH1_PrbY1hTWFTMyKUDw1Kwa7ODQH74YikUD9YNGP0Mahyvpn3',
-  'EBf8dAm1WsPVrnUG-Gf9kb_CVoYG3QhhTgVVeSVc1l1uyKkxF35AIK70jhUGHdp6Px8YoAXyKTerqDfa'
+  process.env.PAYPAL_CLIENT_ID,
+  process.env.PAYPAL_CLIENT_SECRET
 );
 let paypalClient = new checkoutNodeJssdk.core.PayPalHttpClient(environment);
 
