@@ -1,12 +1,12 @@
-require('dotenv').config();
 const express = require('express');
-const path = require('path');
 const app = express();
+const cors = require('cors');
+const path = require('path');
+require('dotenv').config();
 const session = require('express-session');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt');
-const cors = require('cors');
 const MongoStore = require('connect-mongo');
 const { MongoClient, ObjectId } = require('mongodb');
 const nodemailer = require('nodemailer');
