@@ -22,7 +22,7 @@ let paypalClient = new checkoutNodeJssdk.core.PayPalHttpClient(environment);
 // 미들웨어 설정
 app.use(express.json());
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://gachigayokorea.com'],
+  origin: 'https://gachigayokorea.com',
   credentials: true
 }));
 
@@ -55,7 +55,8 @@ app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
-  cookie: { 
+  cookie: {
+    httpOnly: true,
     secure: true,
     sameSite: 'none',
     maxAge: 24 * 60 * 60 * 1000
