@@ -26,6 +26,8 @@ app.use(cors({
   credentials: true
 }));
 
+app.set('trust proxy', 1);
+
 // MongoDB 연결
 let db;
 console.log('MONGODB_URI:', process.env.MONGODB_URI);
@@ -55,8 +57,7 @@ app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
-  cookie: {
-    httpOnly: true,
+  cookie: { 
     secure: true,
     sameSite: 'none',
     maxAge: 24 * 60 * 60 * 1000
@@ -294,6 +295,7 @@ app.post('/api/register', async (req, res) => {
 // 로그인 API
 app.post('/api/login', (req, res, next) => {
   passport.authenticate('local', (err, user, info) => {
+    console.log('passport.authenticate:', { err, user, info });
     if (err) {
       return res.status(500).json({ success: false, message: 'Login error occurred' });
     }
@@ -301,9 +303,11 @@ app.post('/api/login', (req, res, next) => {
       return res.status(401).json({ success: false, message: info.message });
     }
     req.logIn(user, (err) => {
+      console.log('req.logIn:', { err, user });
       if (err) {
         return res.status(500).json({ success: false, message: 'Login error occurred' });
       }
+      console.log('Login successful, user:', user);
       return res.json({ 
         success: true, 
         message: 'Login successful',
