@@ -13,7 +13,7 @@ const nodemailer = require('nodemailer');
 const checkoutNodeJssdk = require('@paypal/checkout-server-sdk');
 
 // PayPal 환경 설정
-let environment = new checkoutNodeJssdk.core.SandboxEnvironment(
+let environment = new checkoutNodeJssdk.core.LiveEnvironment(
   process.env.PAYPAL_CLIENT_ID,
   process.env.PAYPAL_CLIENT_SECRET
 );
