@@ -13,6 +13,10 @@ const nodemailer = require('nodemailer');
 const checkoutNodeJssdk = require('@paypal/checkout-server-sdk');
 
 // PayPal 환경 설정
+console.log('PayPal Client ID:', process.env.PAYPAL_CLIENT_ID);
+console.log('PayPal Client Secret:', process.env.PAYPAL_CLIENT_SECRET ? '***SET***' : '***NOT SET***');
+
+// 라이브 환경으로 전환 (실제 결제)
 let environment = new checkoutNodeJssdk.core.LiveEnvironment(
   process.env.PAYPAL_CLIENT_ID,
   process.env.PAYPAL_CLIENT_SECRET
@@ -22,7 +26,7 @@ let paypalClient = new checkoutNodeJssdk.core.PayPalHttpClient(environment);
 // 미들웨어 설정
 app.use(express.json());
 app.use(cors({
-  origin: 'https://gachigayokorea.com',
+  origin: ['https://gachigayokorea.com', 'http://localhost:5174', 'http://localhost:5173', 'http://localhost:5175'],
   credentials: true
 }));
 
@@ -42,7 +46,7 @@ async function connectDB() {
     db = client.db('koreaglobalinstitute');
     
     // 연결 후 서버 시작
-    const port = process.env.PORT || 3000;
+    const port = process.env.PORT || 1000;
     app.listen(port, () => {
       console.log('Server is running on port', port);
     });
@@ -476,6 +480,11 @@ app.post('/api/consultations/cancel', async (req, res) => {
 
     // PayPal 환불 처리
     if (consultation.paymentStatus === 'completed' && consultation.captureId) {
+      // 이미 환불된 상담인지 확인
+      if (consultation.refundStatus === 'completed') {
+        return res.json({ success: false, error: 'This consultation has already been refunded.' });
+      }
+      
       try {
         // 환불 요청 생성 (캡처 ID 사용)
         const request = new checkoutNodeJssdk.payments.CapturesRefundRequest(consultation.captureId);
@@ -604,8 +613,13 @@ function generateCouponCode() {
 // 상담 완료 처리 API (관리자용)
 app.post('/api/consultations/complete', async (req, res) => {
   try {
-    // 사용자가 로그인되어 있고 관리자 권한이 있는지 확인
-    if (!req.isAuthenticated() || !req.user || req.user.role !== 'admin') {
+    console.log('Complete consultation request body:', req.body);
+    console.log('Complete consultation userRole:', req.body.userRole);
+    
+    // 요청 헤더에서 관리자 권한 확인
+    const { userRole } = req.body;
+    if (userRole !== 'admin') {
+      console.log('Access denied: userRole is not admin. Received:', userRole);
       return res.status(403).json({ success: false, message: '관리자 권한이 필요합니다.' });
     }
 

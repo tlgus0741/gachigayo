@@ -58,8 +58,9 @@ const AdminDashboard = () => {
     e.stopPropagation(); // 이벤트 버블링 방지
     setIsCompleting(prev => ({ ...prev, [consultationId]: true }));
     try {
+      const userRole = localStorage.getItem('userRole');
       const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/consultations/complete`, 
-        { consultationId },
+        { consultationId, userRole },
         { withCredentials: true }
       );
       if (response.data.success) {

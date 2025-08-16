@@ -208,7 +208,8 @@ function App() {
                 <p>Company Name: Gachigayo Korea</p>
                 <p>CEO: Sihyeon Kim</p>
                 <p>Business Registration Number: 302-26-01924</p>
-                <p>Online Sales Business: Currently being reported</p>
+                <p>E-Commerce Registration Number: 2025-Seoul Gangseo-2222</p>
+                <p>Address: #204, 2nd Floor, Jeonwon Building, 137 Hwagok-ro, Gangseo-gu, Seoul, Republic of Korea</p>
                 <p>Email: koreaglobalinstitute@gmail.com</p>
               </div>
               <div className="footer-social-section">
@@ -233,3 +234,4 @@ function App() {
 }
 
 export default App
+  
