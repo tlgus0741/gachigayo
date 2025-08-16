@@ -50,6 +50,16 @@ const Payment = () => {
       const details = await actions.order.capture();
       const captureId = details.purchase_units?.[0]?.payments?.captures?.[0]?.id;
       
+      // capture_id 유효성 확인 및 로깅
+      console.log('PayPal capture details:', details);
+      console.log('Extracted capture_id:', captureId);
+      
+      if (!captureId) {
+        console.error('No capture_id found in PayPal response');
+        setError('Payment processing failed: Invalid payment response');
+        return;
+      }
+      
       const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/consultations`, {
         ...consultationData,
         paymentStatus: 'completed',

@@ -98,7 +98,7 @@ passport.use(new LocalStrategy({
 
     return done(null, user);
   } catch (error) {
-    return done(error); 
+    return done(error);
   }
 }));
 
@@ -483,6 +483,12 @@ app.post('/api/consultations/cancel', async (req, res) => {
       // 이미 환불된 상담인지 확인
       if (consultation.refundStatus === 'completed') {
         return res.json({ success: false, error: 'This consultation has already been refunded.' });
+      }
+      
+      // capture_id 유효성 확인
+      if (!consultation.captureId || consultation.captureId === 'undefined' || consultation.captureId === 'null') {
+        console.log('Invalid capture_id:', consultation.captureId);
+        return res.json({ success: false, error: 'Invalid payment information. Cannot process refund.' });
       }
       
       try {
@@ -953,7 +959,7 @@ const scheduleConsultationDeletion = async () => {
 setInterval(scheduleConsultationDeletion, 24 * 60 * 60 * 1000);
 
 // MongoDB 연결 시작
-connectDB();
+connectDB(); 
 
 
 
